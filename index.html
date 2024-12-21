@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PALAK TYAGI GAMES</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading-screen"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">PALAK TYAGI GAMES</div>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">Games</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search games...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <!-- Game Grid -->
+    <section class="featured-games">
+        <h2>Featured Games</h2>
+        <div class="game-grid">
+            <!-- Tic Tac Toe -->
+            <div class="game-card">
+                <img src="" alt="Tic Tac Toe" data-game-type="tic-tac-toe" class="game-logo">
+                <h3>Tic Tac Toe</h3>
+                <p>Play against AI or a friend!</p>
+                <button data-game="tic-tac-toe-modal">Play Now</button>
+            </div>
+
+            <!-- Match Cards -->
+            <div class="game-card">
+                <img src="" alt="Match Cards" data-game-type="match-cards" class="game-logo">
+                <h3>Match Cards</h3>
+                <p>Test your memory!</p>
+                <button data-game="match-cards-modal">Play Now</button>
+            </div>
+
+            <!-- Ping Pong -->
+            <div class="game-card">
+                <img src="" alt="Ping Pong" data-game-type="ping-pong" class="game-logo">
+                <h3>Ping Pong</h3>
+                <p>Classic paddle game!</p>
+                <button data-game="ping-pong-modal">Play Now</button>
+            </div>
+
+            <!-- Wall Break -->
+            <div class="game-card">
+                <img src="" alt="Wall Break" data-game-type="wall-break" class="game-logo">
+                <h3>Wall Break</h3>
+                <p>Break all the bricks!</p>
+                <button data-game="wall-break-modal">Play Now</button>
+            </div>
+
+            <!-- Wall Break 2.0 -->
+            <div class="game-card">
+                <img src="" alt="Wall Break 2.0" data-game-type="wall-break-2" class="game-logo">
+                <h3>Wall Break 2.0</h3>
+                <p>Enhanced brick breaker!</p>
+                <button data-game="wall-break-2-modal">Play Now</button>
+            </div>
+
+            <!-- Dino Run -->
+            <div class="game-card">
+                <img src="" alt="Dino Run" data-game-type="dino-run" class="game-logo">
+                <h3>Dino Run</h3>
+                <p>Jump over obstacles!</p>
+                <button data-game="dino-run-modal">Play Now</button>
+            </div>
+
+            <!-- Tower Smash -->
+            <div class="game-card">
+                <img src="" alt="Tower Smash" data-game-type="tower-smash" class="game-logo">
+                <h3>Tower Smash</h3>
+                <p>Stack and smash!</p>
+                <button data-game="tower-smash-modal">Play Now</button>
+            </div>
+
+            <!-- Snake Game -->
+            <div class="game-card">
+                <img src="" alt="Snake Game" data-game-type="snake-game" class="game-logo">
+                <h3>Snake Game</h3>
+                <p>Grow your snake!</p>
+                <button data-game="snake-game-modal">Play Now</button>
+            </div>
+
+            <!-- 2048 -->
+            <div class="game-card">
+                <img src="" alt="2048" data-game-type="2048" class="game-logo">
+                <h3>2048</h3>
+                <p>Merge the numbers!</p>
+                <button data-game="2048-modal">Play Now</button>
+            </div>
+
+            <!-- Stack Cake -->
+            <div class="game-card">
+                <img src="" alt="Stack Cake" data-game-type="stack-cake" class="game-logo">
+                <h3>Stack the Cake</h3>
+                <p>Build the tallest cake!</p>
+                <button data-game="stack-cake-modal">Play Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Modals -->
+    <!-- Tic Tac Toe Modal -->
+    <div id="tic-tac-toe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Tic Tac Toe</h2>
+            <div class="game-mode-buttons">
+                <button class="mode-easy">vs AI</button>
+                <button class="mode-hard">vs Player</button>
+            </div>
+            <div id="game-board" class="game-board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <div id="tic-tac-toe-message" class="game-message"></div>
+        </div>
+    </div>
+
+    <!-- Match Cards Modal -->
+    <div id="match-cards-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Match Cards</h2>
+            <div id="match-cards-board" class="match-cards-board"></div>
+            <div id="match-cards-message" class="game-message"></div>
+        </div>
+    </div>
+
+    <!-- Other Game Modals -->
+    <!-- Add similar modal structures for other games -->
+    <div id="ping-pong-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Ping Pong</h2>
+            <canvas id="ping-pong-canvas" width="400" height="300"></canvas>
+            <div id="ping-pong-message" class="game-message"></div>
+        </div>
+    </div>
+
+    <!-- Add other game modals here... -->
+
+    <footer>
+        <p>&copy; 2024 PALAK TYAGI GAMES. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
